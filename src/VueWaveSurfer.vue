@@ -14,7 +14,7 @@ export default {
   mounted() {
     let options = this.options;
     let wsOptions = Object.assign({ container: this.$el }, options);
-    this.waveSurfer = new WaveSurfer.create(wsOptions);
+    this.waveSurfer = WaveSurfer.create(wsOptions)
     this.waveSurfer.load(this.src);
   },
   beforeDestroy() {
