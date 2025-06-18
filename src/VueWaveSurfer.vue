@@ -18,7 +18,11 @@ export default {
     this.waveSurfer.load(this.src);
   },
   beforeDestroy() {
-    this.waveSurfer.destroy();
+    try {
+      this.waveSurfer.destroy();
+    } catch (e) {
+      console.error(e);
+    }
   }
 };
 </script>
